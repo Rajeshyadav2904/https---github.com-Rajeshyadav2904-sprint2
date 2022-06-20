@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,9 @@ import { Injectable } from '@angular/core';
 })
 export class CancelTicketService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  
+  public cancelTicket(bookingid:number){
+    return this.http.delete("http://localhost:8080/movie/users/delete/"+bookingid);
+  }
 }
