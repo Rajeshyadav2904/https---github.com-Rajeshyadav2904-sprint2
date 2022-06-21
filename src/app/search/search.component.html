@@ -47,17 +47,19 @@
         
                 <th> Date |</th>
         
-                <th> MovieName | </th>
+                <th> Movie Name | </th>
 
-                <th> Showid |</th>
+                <th> Show Id |</th>
 
-                <th> location |</th>
+                <th> Location |</th>
 
-                <th> TheatreId |</th>
+                <th> Theatre Id |</th>
 
-                <th> TheatreName |</th>
+                <th> Theatre Name |</th>
 
-                <th> TotalNoofTickets |</th>
+                <th> Show Time   |</th>
+
+                <th> Total No of Tickets |</th>
             
             </tr>
         </thead>
@@ -65,13 +67,14 @@
             
 <tr *ngFor="let dept of details" >
     
-    <td>{{dept.bookingcount}}</td>
-    <td>{{dept.date}}</td>
-    <td>{{dept.moviename}}</td>
+        <td>{{dept.bookingcount}}</td>
+        <td>{{dept.date|date}}</td>
+         <td>{{dept.moviename}}</td>
          <td>{{dept.showid}}</td>
          <td>{{dept.tet.location}}</td>
          <td>{{dept.tet.theatreid}}</td>
          <td>{{dept.tet.theatrename}}</td>
+         <td>{{dept.time}}</td>
          <td>{{dept.totalnooftickets}}</td>
                 
     

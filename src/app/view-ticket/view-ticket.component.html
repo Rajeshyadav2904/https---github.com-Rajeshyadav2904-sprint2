@@ -14,15 +14,19 @@
 
         <th> USERID|</th>
 
-        <th> USER NAME |</th>
+        <th>USER NAME |</th>
 
-        <th> MOVIE NAME | </th>
+        <th>MOVIE NAME | </th>
 
-        <th> TICKETS BOOKED |</th>
+        <th>DATE |</th>
 
-        <th> THEATRE NAME|</th>
+        <th>TIME |</th>
 
-        <th>   LOCATION |</th>
+        <th>TICKETS BOOKED |</th>
+
+        <th>THEATRE NAME|</th>
+
+        <th>LOCATION |</th>
 
         <th>ACTION </th>
     
@@ -34,10 +38,12 @@
 <td>{{datail.userid}}</td>
 <td>{{datail.username}}</td>
 <td>{{datail.moviename}}</td>
- <td>{{datail.noofticketsbooked}}</td>
- <td>{{datail.theatrename}}</td>
- <td>{{datail.location}}</td>
- <td class="text-center"><button class="btn btn-danger btn-xs" (click)="cancel(bookingid)"><span class="glyphicon glyphicon-remove"> Cancel Ticket</span></button></td>
+<td>{{datail.date |date}}</td>
+<td>{{datail.time}}</td>
+<td>{{datail.noofticketsbooked}}</td>
+<td>{{datail.theatrename}}</td>
+<td>{{datail.location}}</td>
+<td class="text-center"><button class="btn btn-danger btn-xs" (click)="cancel(bookingid)"><span class="glyphicon glyphicon-remove"> Cancel Ticket</span></button></td>
         
 
         
