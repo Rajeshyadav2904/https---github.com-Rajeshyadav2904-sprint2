@@ -7,5 +7,5 @@ export class ShowInformation{
         date!:Date;
         bookingcount!:number;
         theatreid!:number;
-        
+        time!:string;
 }
