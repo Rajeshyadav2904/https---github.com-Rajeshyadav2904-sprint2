@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegistrationUserService } from '../registration-user.service';
 import { Users } from '../Users';
 
@@ -10,14 +11,24 @@ import { Users } from '../Users';
   styleUrls: ['./registration-user.component.css']
 })
 export class RegistrationUserComponent implements OnInit {
-  
+  public registerForm!: FormGroup
 
-user: Users= new Users();
-message:any;
-  constructor(private service:RegistrationUserService) { }
+  constructor(private service:RegistrationUserService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.registerForm=this.formBuilder.group(
+      {
+        username:['', Validators.required],
+        password:['',Validators.required],
+        email:['', Validators.required],
+        mobilenumber:['',Validators.required],
+        role:['',Validators.required]
+      }
+    )
   }
+  user: Users= new Users();
+  message:any;
+
   public registerNow(){
    let res= this.service.doResgistration(this.user);
     res.subscribe((data)=>this.message=data);

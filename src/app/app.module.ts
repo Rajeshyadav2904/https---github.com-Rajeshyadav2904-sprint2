@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -15,6 +15,8 @@ import { BookingService } from './booking.service';
 import { LoginService } from './login.service';
 import { RegistrationUserService } from './registration-user.service';
 import { SearchService } from './search.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +30,12 @@ import { SearchService } from './search.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
 
   ],
   providers: [BookingService,CancelTicketComponent,LoginService,RegistrationUserService,SearchService],

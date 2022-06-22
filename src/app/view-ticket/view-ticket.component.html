@@ -1,49 +1,57 @@
+<link rel="stylesheet" href="view-ticket.component.css">
 
 <div class="form-group">
-    <label for="bookingid"><span class="req">* </span> Booking id: </label>
-    <input required type="number" [(ngModel)]="bookingid" name="bookingid" id="bookingid"
-        class="form-control phone" maxlength="28" placeholder="Enter bookingid.." />
+  <label for="bookingid"><span class="req">* </span> Booking id: </label>
+  <input
+    required
+    type="number"
+    [(ngModel)]="bookingid"
+    name="bookingid"
+    id="bookingid"
+    class="form-control phone"
+    maxlength="28"
+    placeholder="Enter bookingid..."
+  />
 
-<input  class="btn btn-success" type="submit" name="submit_reg" value="search" (click)="viewTicketById()">>
+  <input
+    class="btn btn-success"
+    type="submit"
+    name="submit_reg"
+    value="search"
+    (click)="viewTicketById()"
+  />>
 </div>
-<div class='table-responsive'>
-<table class='table'>
-
-<thead>
-    <tr>
-
-        <th> USERID|</th>
-
-        <th> USER NAME |</th>
-
-        <th> MOVIE NAME | </th>
-
-        <th> TICKETS BOOKED |</th>
-
-        <th> THEATRE NAME|</th>
-
-        <th>   LOCATION |</th>
-
-        <th>ACTION </th>
-    
+<div class="table-responsive">
+  <table class="table" border="1" cellspacing="2" cellpading="2">
+    <thead>
+      <tr>
+        <th> USERID</th>
+        <th>USER NAME </th>
+        <th>MOVIE NAME </th>
+        <th>DATE</th>
+        <th>TIME </th>
+        <th>TICKETS BOOKED</th>
+        <th>THEATRE NAME</th>
+        <th>LOCATION </th>
+        <th>ACTION </th>   
     </tr>
-</thead>
-<tbody>
-    
-<tr  >
-<td>{{datail.userid}}</td>
-<td>{{datail.username}}</td>
-<td>{{datail.moviename}}</td>
- <td>{{datail.noofticketsbooked}}</td>
- <td>{{datail.theatrename}}</td>
- <td>{{datail.location}}</td>
- <td class="text-center"><button class="btn btn-danger btn-xs" (click)="cancel(bookingid)"><span class="glyphicon glyphicon-remove"> Cancel Ticket</span></button></td>
-        
-
-        
-    
-</tr>
-</tbody>
-</table>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ datail.userid }}</td>
+        <td>{{ datail.username }}</td>
+        <td>{{ datail.moviename }}</td>
+        <td>{{datail.date |date}}</td>
+        <td>{{datail.time}}</td>
+        <td>{{ datail.noofticketsbooked }}</td>
+        <td>{{ datail.theatrename }}</td>
+        <td>{{ datail.location }}</td>
+        <td class="text-center">
+          <button class="btn btn-danger btn-xs" (click)="cancel(bookingid)">
+            <span class="glyphicon glyphicon-remove"> Cancel Ticket</span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-

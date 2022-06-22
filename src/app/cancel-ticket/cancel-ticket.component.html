@@ -1,7 +1,21 @@
-
+<link rel="stylesheet" href="cancel-ticket.component.css">
 <div class="form-group">
-    <label for="bookingid"><span class="req">* </span> Booking id: </label>
-    <input required type="number" [(ngModel)]="bookingid" name="bookingid" id="bookingid"
-        class="form-control phone" maxlength="28" placeholder="Enter bookingid.." />
-        <input  class="btn btn-success" type="submit" name="submit_reg" value="Cancel Ticket" (click)="cancel()">>
-    </div>
+  <label for="bookingid"><span class="req">* </span> Booking id: </label>
+  <input
+    required
+    type="number"
+    [(ngModel)]="bookingid"
+    name="bookingid"
+    id="bookingid"
+    class="form-control phone"
+    maxlength="28"
+    placeholder="Enter bookingid.."
+  />
+  <input
+    class="btn btn-success"
+    type="submit"
+    name="submit_reg"
+    value="Cancel Ticket"
+    (click)="cancel()"
+  />>
+</div>
