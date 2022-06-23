@@ -9,7 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { ViewTicketComponent } from './view-ticket/view-ticket.component';
 
 const routes: Routes = [
- 
+ {path:"",redirectTo:"home", pathMatch:"full"},
+ {path:'home', component:HomeComponent},
   {path:'registration-user', component:RegistrationUserComponent},
   {path:'booking', component:BookingComponent},
   {path:'view-ticket', component:ViewTicketComponent},
