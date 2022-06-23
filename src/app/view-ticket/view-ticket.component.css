@@ -4,11 +4,13 @@
     background-repeat: no-repeat;
 }  */
 .container{
-    background-image: url(../../assets/7111.jpeg);
+    background-image: url(../../assets/95.jpeg);
  } 
  .form-group{
-     background-image: url(../../assets/7111.jpeg);
+     background-image: url(../../assets/95.jpeg);
+     color: white;
  }
  .table-responsive{
-     background-image: url(../../assets/7111.jpeg);
+     background-image: url(../../assets/95.jpeg);
+     color: white;
  }
