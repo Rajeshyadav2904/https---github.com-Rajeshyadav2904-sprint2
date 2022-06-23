@@ -6,7 +6,6 @@
 />
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 <link rel="stylesheet" href="./registration-user.component.css" />
 <div style="text-align: center">
@@ -123,6 +122,158 @@
             >
           </div>
 
+          <tr>
+            <th>Role</th>
+            <td><input type="radio" id="rbtnrole" name="role" value="user" />User
+                <input type="radio" id="rbtnrole" name="role" value="admin" />Admin
+                <input type="radio" id="rbtnrole" name="role" value="showincharge" />Showincharge
+            </td>
+        </tr>
+          <div class="form-group1">
+            <input
+              class="btn btn-success"
+              type="submit"
+              
+              name="submit_reg"
+              value="Register"
+              (click)="registerNow()"
+            />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>registration-user works!</p>
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<link rel="stylesheet" href="./registration-user.component.css" />
+<div style="text-align: center">
+  <h1>{{ message }}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <fieldset>
+          <legend class="text-center">
+            Valid information is required to register.
+            <span class="req"><small> required*</small></span>
+          </legend>
+
+          <form [formGroup]="registerForm" (ngSubmit)="register()"></form>
+          <div class="form-group">
+            <label for="username"> Username</label>
+            <input
+              type="text"
+              formControlName="username"
+              class="form-control"
+              id="username"
+              placeholder="Enter Username"
+              minlength="3"
+            />
+            <small id="username" class="form-text text-muted"
+              >This will be your login username</small
+            >
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['username'].dirty &&
+                registerForm.hasError('required', 'username')
+              "
+              >username is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="password"> Password</label>
+            <input
+              type="text"
+              formControlName="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter password"
+            />
+            <small id="password" class="form-text text-muted"
+              >This will be your login password</small
+            >
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['password'].dirty &&
+                registerForm.hasError('required', 'password')
+              "
+              >Password is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="email"> email</label>
+            <input
+              type="email"
+              formControlName="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <small id="email" class="form-text text-muted"
+              ></small
+            >
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm;
+                controls: ['email'].dirty &&
+                  registerForm.hasError('required', 'email')
+              "
+              >email is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="mobilenumber"> Mobilenumber</label>
+            <input
+              type="text"
+              formControlName="mobilenumber"
+              class="form-control"
+              id="mobilenumber"
+              placeholder="Enter mobilenumber"
+              minlength="10"
+              maxlength="10"
+            />
+            <small id="mobilenumber" class="form-text text-muted"
+              ></small
+            >
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm;
+                controls: ['mobilenumber'].dirty &&
+                  registerForm.hasError('required', 'mobilenumber')
+              "
+              >mobilenumber is required</span
+            >
+          </div>
           <div class="form-group">
             <label for="role"><span class="req">* </span> Role: </label>
             <input
@@ -141,13 +292,13 @@
                 registerForm.controls['role'].dirty &&
                 registerForm.hasError('required', 'role')
               "
-              >Role is required</span>
+              >Role is required</span
+            >
           </div>
           <div class="form-group1">
             <input
               class="btn btn-success"
               type="submit"
-              
               name="submit_reg"
               value="Register"
               (click)="registerNow()"
@@ -157,5 +308,4 @@
       </form>
     </div>
   </div>
-</div>
-
+</div> -->

@@ -15,6 +15,10 @@ import { BookingService } from './booking.service';
 import { LoginService } from './login.service';
 import { RegistrationUserService } from './registration-user.service';
 import { SearchService } from './search.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { HomepageComponent } from './homepage/homepage.component';
+
 
 
 @NgModule({
@@ -22,11 +26,15 @@ import { SearchService } from './search.service';
     AppComponent,
     LoginComponent,
     RegistrationUserComponent,
-  
+
     SearchComponent,
     CancelTicketComponent,
     BookingComponent,
-    ViewTicketComponent
+    ViewTicketComponent,
+    NavbarComponent,
+    HomeComponent,
+    HomepageComponent,
+   
   ],
   imports: [
     BrowserModule,

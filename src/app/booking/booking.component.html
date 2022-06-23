@@ -1,4 +1,4 @@
-<p>booking works!</p>
+<h1>{{ msg }}</h1>
 <link
   href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
   rel="stylesheet"
@@ -9,7 +9,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <link rel="stylesheet" href="booking.component.css" />
 <div style="text-align: center">
-  <h1>{{ msg }}</h1>
+  
 </div>
 
 <div class="container">
@@ -36,19 +36,10 @@
               maxlength="28"
               placeholder=" Enter No of tickets booked..."
             />
-            <span
-              class="text-danger"
-              *ngIf="
-                bookingForm.controls['noofticketsbooked'].dirty &&
-                bookingForm.hasError('required', 'noofticketsbooked')
-              "
-              >No of Tickets Booked is required</span
-            >
+            <span>No of Tickets Booked is required</span>
           </div>
           <div class="form-group">
-            <label for="userid"
-              ><span class="req">* </span> userid:
-            </label>
+            <label for="userid"><span class="req">* </span> userid: </label>
             <input
               required
               type="text"
@@ -59,14 +50,7 @@
               maxlength="28"
               placeholder="Enter User ID..."
             />
-            <span
-              class="text-danger"
-              *ngIf="
-                bookingForm.controls['userid'].dirty &&
-                bookingForm.hasError('required', 'userid')
-              "
-              >User ID is required</span
-            >
+            <span >User ID is required</span>
           </div>
           <div class="form-group">
             <label for="showid"><span class="req">* </span> Showid: </label>
@@ -79,30 +63,20 @@
               required
               placeholder="Enter Show ID..."
             />
-            <span
-              class="text-danger"
-              *ngIf="
-                bookingForm.controls['showid'].dirty &&
-                bookingForm.hasError('required', 'showid')
-              "
-              >Show ID is required</span
+            <span>Show ID is required</span
             >
           </div>
-
           <div class="form-group">
             <input
               class="btn btn-success"
               type="submit"
               name="submit_reg"
-              value="Register"
+              value="Book"
               (click)="doBooking()"
             />
           </div>
         </fieldset>
       </form>
-      <!-- ends register form -->
-      <!-- second for to fiter user-->
     </div>
-    <!-- ends col-6 -->
   </div>
 </div>
